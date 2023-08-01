@@ -44,7 +44,7 @@ export const info = {
       label: "linkedin",
     },
   ],
-  bio: "Equipped with expertise as a frontend developer and fortified with a background in customer support, I specialize in delivering exceptional web experiences. My current role encompasses both Quality Assurance (QA) and development, where I apply my problem-solving skills to create robust and user-friendly web interfaces. Eager to contribute my knowledge in programming, I stand ready to take on new challenges and work on exciting projects that aim to enhance the web for everyone.",
+  bio: "As a frontend developer with a background in customer support, I specialize in crafting user-centered web experiences. My skill set includes both Quality Assurance (QA) and development, enabling me to apply targeted problem-solving strategies to build robust and accessible web interfaces. I'm prepared to leverage my programming knowledge in new environments, eager to contribute to projects that enhance the web, and adapt my expertise to align with the unique requirements of each opportunity.",
   skills: {
     proficientWith: [
       "javascript",
