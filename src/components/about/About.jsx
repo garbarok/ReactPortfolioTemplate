@@ -1,4 +1,4 @@
-import React from "react";
+import {useState, useEffect} from "react";
 import { Box } from "@mui/material";
 import { info } from "../../info/Info";
 import AboutMe from "./AboutMe";
@@ -6,9 +6,9 @@ import Skills from "./Skills";
 import Hobbies from "./Hobbies";
 
 function useInfo() {
-  const [data, setData] = React.useState(null);
+  const [data, setData] = useState(null);
 
-  React.useEffect(() => {
+  useEffect(() => {
     setData(info);
   }, []);
 
