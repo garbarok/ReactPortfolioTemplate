@@ -36,17 +36,7 @@ export default function About() {
         lastName={lastName}
         baseColor={baseColor}
         bio={data.bio}
-      />
-      <Skills
-        firstName={firstName}
-        lastName={lastName}
-        baseColor={baseColor}
         skills={data.skills}
-      />
-      <Hobbies
-        firstName={firstName}
-        lastName={lastName}
-        baseColor={baseColor}
         hobbies={data.hobbies}
       />
     </Box>
