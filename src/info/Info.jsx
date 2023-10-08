@@ -4,6 +4,7 @@ import mock2 from "../img/mock2.png";
 import mock3 from "../img/mock3.png";
 import mock4 from "../img/mock4.png";
 
+
 export let colors = ["rgb(0,255,164)", "rgb(166,104,255)"];
 
 export const info = {
@@ -44,7 +45,11 @@ export const info = {
       label: "linkedin",
     },
   ],
-  bio: "As a frontend developer with a background in customer support, I specialize in crafting user-centered web experiences. My skill set includes both Quality Assurance (QA) and development, enabling me to apply targeted problem-solving strategies to build robust and accessible web interfaces. I'm prepared to leverage my programming knowledge in new environments, eager to contribute to projects that enhance the web, and adapt my expertise to align with the unique requirements of each opportunity.",
+  bio: `I began my professional journey at AddComm in April 2022, initially serving as a Manual Tester and Customer Support Specialist. In this role, I contributed to projects for prominent Dutch firms such as Onguard and Carerix, leveraging the Flowize tool. My responsibilities encompassed integrating diverse HR systems, generating payment links, and efficiently handling extensive data sets to fulfill our client expectations.
+  
+  Transitioning to the development team in January 2023, I shifted my focus towards software assurance and issue resolution. A notable project during this period was enhancing the PDF Editor feature of Flowize, where I predominantly utilized JavaScript and PHP.
+  
+  As I evolve in my role as a Junior Frontend Developer, I am passionate about harnessing my acquired skills to design and refine web solutions. My aim is to produce platforms that are intuitive and user-centric.`,  
   skills: {
     proficientWith: [
       "javascript",
@@ -55,14 +60,18 @@ export const info = {
       "css3",
       "Agile methodologies",
       "QA and testing",
+      "docker",
+      "jest",
     ],
     exposedTo: [
-      "Nodejs",
+      "nodejs",
       "next.js",
       "typescript",
       "tailwindcss",
-      "Vue.js",
-      "SQL",
+      "vue",
+      "sql",
+      "java",
+      "php"
     ],
   },
   hobbies: [
@@ -75,12 +84,12 @@ export const info = {
       emoji: "🚴🏼",
     },
     {
-      label: "movies",
-      emoji: "🎥",
+      label: "Learning some new tech",
+      emoji: "🤓",
     },
     {
       label: "cooking",
-      emoji: "🌶",
+      emoji: "👨🏼‍🍳",
     }
   ],
   portfolio: [
