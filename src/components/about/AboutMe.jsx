@@ -13,10 +13,11 @@ import {
   faDocker,
   faNodeJs,
   faVuejs,
-
-
-
+  faJava,
+  faPhp
 } from "@fortawesome/free-brands-svg-icons";
+import {faCircleNotch, faDatabase} from '@fortawesome/free-solid-svg-icons'
+
 
 export default function AboutMe({ firstName, lastName, baseColor, bio, skills, hobbies }) {
 
@@ -51,6 +52,9 @@ export default function AboutMe({ firstName, lastName, baseColor, bio, skills, h
   const exposedSkillIcons = {
     nodejs: faNodeJs,
     vue: faVuejs,
+    java: faJava,
+    php: faPhp,
+    sql: faDatabase
   }
 
   const skillsText = (
@@ -59,7 +63,7 @@ export default function AboutMe({ firstName, lastName, baseColor, bio, skills, h
       <ul className={Style.skills}>
         {skills.proficientWith.map((proficiency, index) => (
           <li key={index}>
-            {skillIcons[proficiency] ? <FontAwesomeIcon icon={skillIcons[proficiency]} /> : null} {" "}
+            {skillIcons[proficiency] ? <FontAwesomeIcon icon={skillIcons[proficiency]} /> : <FontAwesomeIcon icon={faCircleNotch} />} {" "}
             {proficiency.charAt(0).toUpperCase() + proficiency.slice(1)}
           </li>
         ))}
@@ -69,7 +73,7 @@ export default function AboutMe({ firstName, lastName, baseColor, bio, skills, h
       <ul className={Style.skills}>
         {skills.exposedTo.map((skill, index) => (
           <li key={index}>
-            {exposedSkillIcons[skill] ? <FontAwesomeIcon icon={exposedSkillIcons[skill]} /> : null} {" "}
+            {exposedSkillIcons[skill] ? <FontAwesomeIcon icon={exposedSkillIcons[skill]} /> : <FontAwesomeIcon icon={faCircleNotch} />} {" "}
             {skill.charAt(0).toUpperCase() + skill.slice(1)}
           </li>
         ))}
