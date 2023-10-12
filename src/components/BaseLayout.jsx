@@ -43,11 +43,10 @@ export default function BaseLayout() {
             >
               <small
                 style={{
-                  fontSize: "0.7rem",
+                  fontSize: "1rem",
                 }}
               >
-                template created with &hearts; by{" "}
-                <a href={"https://paytonpierce.dev"}>Payton Pierce</a>
+                Óscar Gallego Ruiz
               </small>
               <p>&copy; 2023</p>
             </Box>

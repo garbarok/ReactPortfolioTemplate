@@ -14,9 +14,14 @@ function PortfolioBlock(props) {
       alignItems={"center"}
       sx={{ textAlign: "center" }}
     >
-      <Box component={"img"} src={image} alt={"mockup"} />
-      <h1 sx={{ fontSize: "2rem" }}>{title}</h1>
-      <h3 sx={{ fontSize: "1.2rem" }}>{stack}</h3>
+      <Box
+        component={"img"}
+        src={image}
+        alt={"mockup"}
+        sx={{ marginBottom: "-90px" }}
+      />
+      <h1 sx={{ fontSize: "1.2rem" }}>{title}</h1>
+      <h3 sx={{ fontSize: "0.8rem" }}>{stack}</h3>
       <Box
         className={"portfolio"}
         display={"flex"}
