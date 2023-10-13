@@ -17,6 +17,7 @@ const navbarLinks = [
     to: "/portfolio",
     active: "Portfolio",
   },
+  { name: "Contact", to: "/contact", active: "Contact" },
 ];
 
 export default navbarLinks;

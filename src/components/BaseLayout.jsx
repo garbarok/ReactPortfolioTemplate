@@ -7,7 +7,7 @@ import Portfolio from "../components/portfolio/Portfolio";
 import { Route, Routes } from "react-router-dom";
 import { Box, Grid } from "@mui/material";
 import useDarkMode from "../hooks/useDarkMode";
-
+import ContactForm from "./contact/ContactForm";
 export default function BaseLayout() {
   const [darkMode, toggleDarkMode] = useDarkMode();
 
@@ -29,6 +29,7 @@ export default function BaseLayout() {
               <Route exact path={"/"} element={<Home />} />
               <Route exact path={"/about"} element={<About />} />
               <Route exact path={"/portfolio"} element={<Portfolio />} />
+              <Route exact path={"/contact"} element={<ContactForm />} />
             </Routes>
           </Grid>
           <Grid item>
