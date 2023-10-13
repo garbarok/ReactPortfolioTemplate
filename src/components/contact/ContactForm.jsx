@@ -11,7 +11,7 @@ export default function ContactForm() {
     const message = `Subject: ${subject}\n${formData.get("message")}`;
 
     const response = await fetch(
-      "https://https://emailservice.2.ie-1.fl0.io/send-email",
+      "https://emailservice.2.ie-1.fl0.io/send-email",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
