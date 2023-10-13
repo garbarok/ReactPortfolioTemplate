@@ -5,20 +5,27 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  color: $green;
+
+}
+
+.heading {
+  color: rgb(0, 255, 164);
 }
 
 .button {
-    background-color: $purple !important;
-    color: $white !important;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 1.25rem;
-    margin-top: 1rem;
-    cursor: pointer;
+  background: -webkit-linear-gradient(135deg, rgb(0, 255, 164), rgb(166, 104, 255)) !important;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    transform: translateY(-3px);
     transition: $transition;
-    &:hover {
-        transform: translateY(-3px);
-        transition: $transition;
-    }
+  }
 }
+
