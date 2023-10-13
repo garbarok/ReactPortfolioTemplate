@@ -10,11 +10,14 @@ export default function ContactForm() {
     const subject = formData.get("subject");
     const message = `Subject: ${subject}\n${formData.get("message")}`;
 
-    const response = await fetch("http://localhost:8080/send-email", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, subject, message }),
-    });
+    const response = await fetch(
+      "https://https://emailservice.2.ie-1.fl0.io/send-email",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, subject, message }),
+      },
+    );
 
     if (response.ok) {
       // Handle success
