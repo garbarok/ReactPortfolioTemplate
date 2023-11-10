@@ -28,7 +28,7 @@ export default function useForm(initialForm = {}, setSnackbarMessage, setSnackba
       const name = formData.get("name");
       const email = formData.get("email");
       const subject = formData.get("subject");
-      const message = `Subject: ${subject}\n${formData.get("message")}`;
+      const message = formData.get("message");
 
       invariantResponse(typeof name === 'string', 'name must be a string')
       invariantResponse(typeof email === 'string', 'email must be a string')
