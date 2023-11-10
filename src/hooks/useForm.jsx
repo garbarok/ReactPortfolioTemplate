@@ -1,5 +1,6 @@
 import { useState } from "react";
 import validateForm from "../components/contact/ValidateForm";
+import { invariantResponse } from "../utils/misc";
 
 export default function useForm(initialForm = {}, setSnackbarMessage, setSnackbarOpen) {
 
@@ -45,9 +46,11 @@ export default function useForm(initialForm = {}, setSnackbarMessage, setSnackba
 
       if (response.ok) {
         setSnackbarMessage("Email sent successfully");
+        setSnackbarOpen(true);
         resetForm();
       } else {
         setSnackbarMessage("Error: " + response.statusText);
+        setSnackbarOpen(true);
       }
       setErrors({});
     } catch (error) {
@@ -65,7 +68,7 @@ export default function useForm(initialForm = {}, setSnackbarMessage, setSnackba
     errors,
     formState,
     handleChange,
-    // resetForm,
+    resetForm,
     handleSubmit
   }
 }
