@@ -1,23 +1,16 @@
 import { useState } from "react";
 import validateForm from "../components/contact/ValidateForm";
 
-
-
 export default function useForm(initialForm = {}, setSnackbarMessage, setSnackbarOpen) {
 
   const [formState, setFormState] = useState(initialForm)
   const [errors, setErrors] = useState({});
 
-  console.log(formState)
-  validateForm(formState)
-
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setFormState({
-      ...formState,
-      [name]: value
-    });
+    setFormState({ ...formState, [name]: value });
   };
+
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -36,6 +29,11 @@ export default function useForm(initialForm = {}, setSnackbarMessage, setSnackba
       const subject = formData.get("subject");
       const message = `Subject: ${subject}\n${formData.get("message")}`;
 
+      invariantResponse(typeof name === 'string', 'name must be a string')
+      invariantResponse(typeof email === 'string', 'email must be a string')
+      invariantResponse(typeof subject === 'string', 'subject must be a string')
+      invariantResponse(typeof message === 'string', 'message must be a string')
+
       const response = await fetch(
         `${import.meta.env.VITE_EMAIL_SERVICE_URL}/send-email`,
         {
@@ -47,6 +45,7 @@ export default function useForm(initialForm = {}, setSnackbarMessage, setSnackba
 
       if (response.ok) {
         setSnackbarMessage("Email sent successfully");
+        resetForm();
       } else {
         setSnackbarMessage("Error: " + response.statusText);
       }
@@ -59,12 +58,14 @@ export default function useForm(initialForm = {}, setSnackbarMessage, setSnackba
 
   const resetForm = () => {
     setFormState(initialForm)
+    setErrors({});
   }
+
   return {
     errors,
     formState,
     handleChange,
-    resetForm,
+    // resetForm,
     handleSubmit
   }
 }

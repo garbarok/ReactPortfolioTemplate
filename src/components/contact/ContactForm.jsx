@@ -65,7 +65,6 @@ export default function ContactForm() {
             type="submit"
             variant="contained"
             className={styles.button}
-            onClick={resetForm}
             sx={{
               mt: 2,
               alignSelf: 'center'
