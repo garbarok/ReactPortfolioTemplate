@@ -36,7 +36,7 @@ export default function useForm(initialForm = {}, setSnackbarMessage, setSnackba
       invariantResponse(typeof message === 'string', 'message must be a string')
 
       const response = await fetch(
-        `${import.meta.env.VITE_EMAIL_SERVICE_URL}/send-email`,
+        `${import.meta.env.VITE_EMAIL_SERVICE_URL}/api/send-email`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
