@@ -3,9 +3,16 @@ import IconLink from "./IconLink";
 import { Box } from "@mui/material";
 import LanguageIcon from "@mui/icons-material/Language";
 import CodeIcon from "@mui/icons-material/Code";
+import { useImageCache } from "../../utils/imageCacheContext";
 
 function PortfolioBlock(props) {
   const { image, live, source, title, stack } = props;
+  const { cache, preloadImage } = useImageCache();
+
+  React.useEffect(() => {
+    preloadImage(image);
+  }, [image, preloadImage]);
+
   return (
     <Box
       display={"flex"}
@@ -16,9 +23,9 @@ function PortfolioBlock(props) {
     >
       <Box
         component={"img"}
-        src={image}
+        src={cache[image]?.src || image}
         alt={"mockup"}
-        sx={{ marginBottom: "-90px" }}
+      // sx={{ marginBottom: "-90px" }}
       />
       <h1 sx={{ fontSize: "1.2rem" }}>{title}</h1>
       <h3 sx={{ fontSize: "0.8rem" }}>{stack}</h3>
