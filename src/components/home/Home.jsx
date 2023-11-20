@@ -6,8 +6,16 @@ import EmojiBullet from "./EmojiBullet";
 import SocialIcon from "./SocialIcon";
 import { Box } from "@mui/material";
 import { info } from "../../info/Info";
+import { useImageCache } from "../../utils/imageCacheContext";
 
 export default function Home() {
+
+  const { cache, preloadImage } = useImageCache();
+
+  React.useEffect(() => {
+    preloadImage(me);
+  }, [me, preloadImage]);;
+
   return (
     <Box
       component={"main"}
@@ -22,7 +30,7 @@ export default function Home() {
         alt={"image of developer"}
         style={{ background: info.gradient }}
         component={"img"}
-        src={me}
+        src={cache[me]?.src || me}
         width={{ xs: "35vh", md: "40vh" }}
         height={{ xs: "35vh", md: "40vh" }}
         borderRadius={"50%"}
