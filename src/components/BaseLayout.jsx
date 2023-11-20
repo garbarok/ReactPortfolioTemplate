@@ -7,7 +7,7 @@ import Portfolio from "../components/portfolio/Portfolio";
 import { Route, Routes } from "react-router-dom";
 import { Box, Grid } from "@mui/material";
 import useDarkMode from "../hooks/useDarkMode";
-
+import Contact from "./contact/Contact";
 export default function BaseLayout() {
   const [darkMode, toggleDarkMode] = useDarkMode();
 
@@ -29,6 +29,7 @@ export default function BaseLayout() {
               <Route exact path={"/"} element={<Home />} />
               <Route exact path={"/about"} element={<About />} />
               <Route exact path={"/portfolio"} element={<Portfolio />} />
+              <Route exact path={"/contact"} element={<Contact />} />
             </Routes>
           </Grid>
           <Grid item>
@@ -43,11 +44,10 @@ export default function BaseLayout() {
             >
               <small
                 style={{
-                  fontSize: "0.7rem",
+                  fontSize: "1rem",
                 }}
               >
-                template created with &hearts; by{" "}
-                <a href={"https://paytonpierce.dev"}>Payton Pierce</a>
+                Óscar Gallego Ruiz
               </small>
               <p>&copy; 2023</p>
             </Box>

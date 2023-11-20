@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import IconLink from "./IconLink";
-import { Box } from "@mui/material";
+import { Box, Skeleton } from "@mui/material";
 import LanguageIcon from "@mui/icons-material/Language";
 import CodeIcon from "@mui/icons-material/Code";
+import { useImageCache } from "../../utils/imageCacheContext";
 
 function PortfolioBlock(props) {
   const { image, live, source, title, stack } = props;
+  const { cache, preloadImage } = useImageCache();
+  const [isLoading, setIsLoading] = useState(true);
+
+  React.useEffect(() => {
+    preloadImage(image);
+    const img = new Image();
+    img.onload = () => setIsLoading(false);
+    img.src = image;
+  }, [image, preloadImage]);
+
   return (
     <Box
       display={"flex"}
@@ -14,9 +25,18 @@ function PortfolioBlock(props) {
       alignItems={"center"}
       sx={{ textAlign: "center" }}
     >
-      <Box component={"img"} src={image} alt={"mockup"} />
-      <h1 sx={{ fontSize: "2rem" }}>{title}</h1>
-      <h3 sx={{ fontSize: "1.2rem" }}>{stack}</h3>
+      {isLoading ? (
+        <Skeleton variant="rectangular" width={210} height={118} />
+      ) : (
+        <Box
+          component={"img"}
+          src={cache[image]?.src || image}
+          alt={"mockup"}
+          sx={{ marginBottom: "-90px" }}
+        />
+      )}
+      <h1 sx={{ fontSize: "1.2rem" }}>{title}</h1>
+      <h3 sx={{ fontSize: "0.8rem" }}>{stack}</h3>
       <Box
         className={"portfolio"}
         display={"flex"}

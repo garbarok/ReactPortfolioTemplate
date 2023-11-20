@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Style from "./Navbar.module.scss";
-import Toggler from "./home/Toggler";
+import Toggle from "./home/Toggle";
 import { Link, useLocation } from "react-router-dom";
 import { Box } from "@mui/material";
 import navbarLinks from "./navbarLinks";
@@ -11,7 +11,7 @@ export default function Navbar({ darkMode, handleClick }) {
   const [active, setActive] = useState(
     location.pathname === "/"
       ? "home"
-      : location.pathname.slice(1, location.pathname.length)
+      : location.pathname.slice(1, location.pathname.length),
   );
 
   return (
@@ -22,7 +22,6 @@ export default function Navbar({ darkMode, handleClick }) {
         justifyContent={"center"}
         alignItems={"center"}
         gap={{ xs: "2rem", md: "8rem" }}
-        textTransform={"lowercase"}
         fontSize={"1rem"}
       >
         {navbarLinks.map((link, index) => (
@@ -43,7 +42,7 @@ export default function Navbar({ darkMode, handleClick }) {
           </Box>
         ))}
         <li>
-          <Toggler darkMode={darkMode} handleClick={handleClick} />
+          <Toggle darkMode={darkMode} handleClick={handleClick} />
         </li>
       </Box>
     </Box>
