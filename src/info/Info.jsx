@@ -11,7 +11,7 @@ export const info = {
   firstName: "Óscar",
   lastName: "Gallego",
   initials: "OGR",
-  position: "a Frontend Developer",
+  position: "Nice to meet you",
   selfPortrait: self,
   gradient: `-webkit-linear-gradient(135deg, ${colors})`,
   baseColor: colors[0],
@@ -26,7 +26,7 @@ export const info = {
     },
     {
       emoji: "💼",
-      text: "Frontend Developer & QA at AddComm",
+      text: "Frontend Developer",
     },
     {
       emoji: "✉️",
@@ -45,29 +45,25 @@ export const info = {
       label: "linkedin",
     },
   ],
-  bio: `I began my professional journey at AddComm in April 2022, initially serving as a Manual Tester and Customer Support Specialist. In this role, I contributed to projects for prominent Dutch firms such as Onguard and Carerix, leveraging the Flowize tool. My responsibilities encompassed integrating diverse HR systems, generating payment links, and efficiently handling extensive data sets to fulfill our client expectations.
-  
-  Transitioning to the development team in January 2023, I shifted my focus towards software assurance and issue resolution. A notable project during this period was enhancing the PDF Editor feature of Flowize, where I predominantly utilized JavaScript and PHP.
-  
-  As I evolve in my role as a Junior Frontend Developer, I am passionate about harnessing my acquired skills to design and refine web solutions. My aim is to produce platforms that are intuitive and user-centric.`,  
+  bio: `Beginning my tech career in 2021, I've rapidly advanced from quality assurance and customer support to a role as a Frontend Developer, gaining valuable experience at companies like AddComm. Skilled in JavaScript, React, TypeScript, and web development tools, I'm now focusing on expanding my expertise into backend technologies. Driven by a passion for user-centric design, I'm dedicated to honing my skills and embracing new challenges in web development.`,
   skills: {
     proficientWith: [
-      "javascript",
       "react",
-      "git",
-      "github",
+      "javascript",
+      "typescript",
       "html5",
       "css3",
-      "Agile methodologies",
-      "QA and testing",
+      "git",
+      "github",
+      "tailwindcss",
+      "agile methodologies",
+      "testing",
       "docker",
       "jest",
     ],
     exposedTo: [
       "nodejs",
       "next.js",
-      "typescript",
-      "tailwindcss",
       "vue",
       "sql",
       "java",
